@@ -1,14 +1,17 @@
-let temp = 26;
-let weather = "clear";
+let price = 10000; 
+let range = "day"; 
 
-let activity;
+let transl;
 
-if(temp >=25 && weather == "clear"){
-    activity="football";    
-}else if ((temp >= 10 && temp <=24) || weather == "cloudy"){
-    activity="computer_games";
-}else{
-    activity = "waching_TV"
+if (range === "month") {
+    transl = "месяц";
+} else if (range === "day") {
+    transl = "день";
+} else if (range === "week") {
+    transl = "неделя";
+} else {
+    transl = "неизвестный период";
 }
 
-console.log(activity);
+let result = price + " Руб в " + transl;
+console.log(result);
